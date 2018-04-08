@@ -1,8 +1,7 @@
-%footer.fixed-bottom#contacts-footer
+%footer.sticky-bottom.bg-dark
   .d-flex.flex-row.justify-content-between.align-items-center
     .footer-logo
-      = link_to image_tag(asset_pack_path('davechmura_website/images/davechmura_website_logo.png'), alt: "#{(t :sitename)} Logo, link to home page.", class: 'navbar-logo', id: root_path(anchor: 'page-top')), root_path
-
+      -# = link_to image_tag("#{sitename}Logo.png", class: 'navbar-brand navbar-logo', alt: "#{sitename} Logo, link to home page."), root_path
       = link_to (t :sitename), root_path, class:'navbar-brand'
     .footer-links
       %ul.navbar-nav.flex-row.justify-content-around
@@ -10,6 +9,6 @@
         %li.nav-item= link_to 'Contact Us', contact_path, class:'nav-link'
         %li.nav-item= link_to 'Privacy Policy', privacy_path, class:'nav-link'
       .footer-copyright.text-center
-        = link_to "© 2018 - Copyright davechmura_website", about_path
+        = link_to "© 2018 - Copyright #{(t :sitename)}, All Rights Reserved", about_path
     .footer-contact
-      = render 'feedback/feedback'
+    = render 'feedback/feedback'
