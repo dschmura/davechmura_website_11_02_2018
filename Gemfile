@@ -25,6 +25,7 @@ gem 'administrate', '~> 0.8.1'
 gem 'haml-rails'
 gem 'sidekiq', '~> 5.0'
 gem 'uglifier'
+gem 'skylight'
 
 # gem 'devise', '~> 4.4.3'
 # gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
