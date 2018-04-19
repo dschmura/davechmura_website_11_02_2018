@@ -3,9 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import '~bootstrap/scss/bootstrap'
 @import './mixins'
+@import './variables'
 
 .resume-header
-  height: 300px
+  height: 250px
   background-color:  #EBAA1E
   background-image: url('../images/resume_header.jpg')
   background-position: right
@@ -15,10 +16,11 @@
   .resume-contact
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif
     font-weight: 700
-    position: absolute
+    position: relative
+    bottom: 5%
     // @include transparent(0.85, 85)
-    width: 300px
-    min-height: 300px
+    width: 250px
+    min-height: 200px
     border-bottom: 10px solid #fff
     transform: rotate(-90deg)
     -webkit-transform: rotate(-90deg)
@@ -30,8 +32,8 @@
     color: #FFFFFF
     position: relative
     top: 13px
-    right: 20px
-    font-size: 2.1rem
+    right: 1.9rem
+    font-size: $fontsize * 1.75
     &:hover
       text-decoration: none
 
@@ -39,10 +41,11 @@
   h3
     position: relative
     bottom: 5px
-    left: 6px
-    font-size: 2rem
+    right: 1.9rem
+    font-size: $fontsize * 1.2
     font-style: bold
     color: #FFFFFF
+
 
 .resume-email
   position: relative
@@ -53,34 +56,43 @@
 
 .resume
   // @include outer-container(100%)
-  %ul
-    %li
-      list-style-type: circle
+  // display: flex
+  p
+    font-size: $fontsize * 0.5
+  // ul
+  //   li
+  //     list-style-type: circle
 .resume-button
   width: 60%
   position: relative
   left: 20%
 
-
 .resume-masthead
+  h2
+    font-size: $fontsize * 1.5
+
   background-color: yellow
   @include make-row()
 
   .resume-activities
     background-color: #e64141
     @include make-col(4)
-    padding: 2rem
+    padding: 1rem
+    li
+      font-size: $fontsize * 0.9
   .resume-summary
     background-color: #17a7d5
     @include make-col(8)
-    padding: 2rem
+    padding: 1rem
+    font-size: $fontsize
   .resume-skills
     @include make-col(12)
     background-color: #2bb94b
-    padding: 2rem
+    padding: 1rem
+    font-size: $fontsize
 
 .resume-job
-  font-size: 110%
+  font-size: $fontsize
   line-height: 1rem
   // @include margin( 1rem null null null)
 
@@ -101,6 +113,7 @@
   margin-right: 1rem
 
 .resume-experience-section
+  font-size: $fontsize
   @include make-col(9)
   // @include outer-container
 
